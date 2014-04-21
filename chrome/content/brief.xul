@@ -194,6 +194,14 @@
                     tooltiptext="&markViewRead.tooltip;"
                     onclick="onMarkViewReadClick(event)"/>
             <spacer class="button-spacer" flex="1"/>
+            <!-- Nikita.Win add begin -->
+            <button id="openFirst10UnreadItems"
+                    class="brief-button feed-header-button"
+                    type="checkbox"
+                    autoCheck="false"
+                    tooltiptext="Open first 10 unread items"
+                    onclick="Commands.openUnreadEntryLink()"/>
+            <!-- Nikita.Win add end -->
             <button id="headlines-checkbox"
                     class="brief-button view-button"
                     type="checkbox"
