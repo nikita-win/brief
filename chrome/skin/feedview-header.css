@@ -92,7 +92,22 @@
     margin-left: 11px !important;
 }
 
+/* =========== Open first 10 unread items button =========== */
 
+#openFirst10UnreadItems {
+    padding-top: 4px !important;
+    margin-right: 5px !important;
+    list-style-image: url(icons/open.png);
+    -moz-image-region: rect(0px, 32px, 32px, 0px);
+}
+
+#openFirst10UnreadItems:hover {
+    -moz-image-region: rect(32px, 32px, 64px, 0px);
+}
+
+#openFirst10UnreadItems:hover:active {
+    -moz-image-region: rect(64px, 32px, 96px, 0px);
+}
 
 /* =========== View filter buttons =========== */
 
