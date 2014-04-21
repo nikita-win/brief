@@ -254,6 +254,19 @@ let Commands = {
         Commands.openEntryLink(gCurrentView.selectedEntry);
     },
 
+    //Nikita.Win added begin: In order to add a button to open the first 10 unread links.
+    //This will only work while only unread entries are displayed.
+    openUnreadEntryLink: function cmd_openUnreadEntryLink() {
+        //TODO: This _loadedEntries should be replaced with the exact array of unread entries.
+        let count = gCurrentView._loadedEntries.length;
+        for (let i = 0; i<10 && i<count; i++){
+            //TODO: It seems that this function is a little slow and that will cause some issue while click the button again quickly.
+            Commands.openEntryLink(gCurrentView._loadedEntries[i]);
+        }
+    },
+    //Nikita.Win added end
+
+
     openEntryLink: function cmd_openEntryLink(aEntry) {
         let entryView = gCurrentView.getEntryView(aEntry);
 
